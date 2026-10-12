@@ -23,5 +23,6 @@ func fonctions(tableau []string) []string {
 	tableau = f.Hex(tableau)
 	tableau = f.Bin(tableau)
 	tableau = f.Up(tableau)
+	tableau = f.Low(tableau)
 	return tableau
 }
