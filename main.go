@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+	"os"
+	"strings"
+	f "travail/fonction"
+)
+
+func main() {
+	fichier, _ := os.ReadFile(os.Args[1]) //récupération du simple
+	contenu := string(fichier)
+
+	tableau := f.CreerMatrice(contenu)
+	fmt.Print(tableau)
+	tableau = fonctions(tableau)
+
+	Stockage := strings.Join(tableau, " ") //envoie le fichier
+	os.WriteFile("result.txt", []byte(Stockage), 0644)
+}
+
+func fonctions(tableau []string) []string {
+	tableau = f.Hex(tableau)
+	tableau = f.Bin(tableau)
+	return tableau
+}
