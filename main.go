@@ -24,5 +24,7 @@ func fonctions(tableau []string) []string {
 	tableau = f.Bin(tableau)
 	tableau = f.Up(tableau)
 	tableau = f.Low(tableau)
+	tableau = f.Cap(tableau)
+	tableau = f.An(tableau)
 	return tableau
 }
