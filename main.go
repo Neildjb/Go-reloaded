@@ -11,7 +11,7 @@ func main() {
 	fichier, _ := os.ReadFile(os.Args[1]) //récupération du simple
 	contenu := string(fichier)
 
-	tableau := f.CreerMatrice(contenu)
+	tableau := f.Decoupe(contenu)
 	fmt.Print(tableau)
 	tableau = fonctions(tableau)
 
@@ -26,5 +26,7 @@ func fonctions(tableau []string) []string {
 	tableau = f.Low(tableau)
 	tableau = f.Cap(tableau)
 	tableau = f.An(tableau)
+	tableau = f.Ponctuation(tableau)
+	tableau = f.Groupes(tableau)
 	return tableau
 }
