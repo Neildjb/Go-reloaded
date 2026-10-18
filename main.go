@@ -26,7 +26,7 @@ func fonctions(tableau []string) []string {
 	tableau = f.Low(tableau)
 	tableau = f.Cap(tableau)
 	tableau = f.An(tableau)
+	tableau = f.Apostrophe(tableau)
 	tableau = f.Ponctuation(tableau)
-	tableau = f.Groupes(tableau)
 	return tableau
 }
